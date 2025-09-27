@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TaleemAI{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">
+                <a href="{% url 'home' %}">TaleemAI</a>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="{% url 'home' %}" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">For Students</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">For Teachers</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Logout</a>
+                {% else %}
+                    <a href="{% url 'signup' %}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Sign Up</a>
+                {% endif %}
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="{% url 'home' %}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For Students</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For Teachers</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="block px-4 py-2 bg-blue-600 text-white">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Login</a>
+                <a href="{% url 'signup' %}" class="block px-4 py-2 bg-blue-600 text-white">Sign Up</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <p>Email: info@taleemai.com</p>
+                    <p>Phone: +92 123 456 7890</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Social Links</h3>
+                    <a href="#" class="block hover:text-blue-400">Facebook</a>
+                    <a href="#" class="block hover:text-blue-400">Twitter</a>
+                    <a href="#" class="block hover:text-blue-400">LinkedIn</a>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">About Us</h3>
+                    <p>Empowering education through AI in local languages.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <a href="#" class="block hover:text-blue-400">Privacy Policy</a>
+                    <a href="#" class="block hover:text-blue-400">Terms of Service</a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>&copy; 2025 Taleem AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

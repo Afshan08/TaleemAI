@@ -1,8 +1,12 @@
-# TODO: Add Roles to User Auth in Datamanager App
+# TODO for Styling Datamanager Templates
 
-- [x] Add UserProfile model to models.py with OneToOneField to User and role field (choices: teacher, student)
-- [x] Update SignupForm in forms.py to include role selection field
-- [x] Modify signup_view in views.py to create and save UserProfile with selected role
-- [x] Register UserProfile in admin.py
-- [ ] Run python manage.py makemigrations datamanager
-- [ ] Run python manage.py migrate
+## Completed Steps
+- [x] Create base.html template with Tailwind CSS CDN, professional navbar (conditional links based on auth), and footer.
+- [x] Update home.html to extend base.html and apply professional styling (centered card layout, blue theme).
+- [x] Update login.html to extend base.html and style form (card layout, labeled inputs, styled button, message alerts).
+- [x] Update signup.html to extend base.html and style form (identical to login for consistency).
+
+## Pending Tasks
+- [ ] Run Django server to verify styling (e.g., python manage.py runserver).
+- [ ] Test responsiveness and adjust if needed.
+- [ ] If user provides feedback on colors or layout, make adjustments.
