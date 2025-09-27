@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taleem AI - Personalized Learning in Urdu & Local Languages</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">TaleemAI</div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="students.html" class="text-gray-700 hover:text-blue-600">For Students</a>
+                <a href="teachers.html" class="text-gray-700 hover:text-blue-600">For Teachers</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="signup.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Sign Up</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="students.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For Students</a>
+            <a href="teachers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">For Teachers</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="signup.html" class="block px-4 py-2 bg-blue-600 text-white">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Personalized Learning. Smarter Teaching. In Urdu & Local Languages.</h1>
+            <p class="text-xl md:text-2xl mb-8">Empowering students with adaptive AI learning and giving teachers real-time insights.</p>
+            <div class="space-x-4">
+                <a href="students.html" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">Start Learning</a>
+                <a href="teachers.html" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600">Teacher Dashboard Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose Taleem AI?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-book text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Adaptive Learning Paths</h3>
+                    <p>AI designs a syllabus just for you.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-clipboard-check text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Diagnostic Tests</h3>
+                    <p>Get placed in the right grade & level.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-globe text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Urdu + Regional Languages</h3>
+                    <p>Learn in your own language.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Teacher Analytics</h3>
+                    <p>Track progress beyond marks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">1</div>
+                    <p>Student signs up & takes placement test.</p>
+                </div>
+                <i class="fas fa-arrow-right text-2xl text-gray-400 hidden md:block"></i>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">2</div>
+                    <p>AI assigns grade level & syllabus.</p>
+                </div>
+                <i class="fas fa-arrow-right text-2xl text-gray-400 hidden md:block"></i>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">3</div>
+                    <p>Student learns via adaptive classes.</p>
+                </div>
+                <i class="fas fa-arrow-right text-2xl text-gray-400 hidden md:block"></i>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">4</div>
+                    <p>Quizzes adjust syllabus. Teacher monitors via dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <p>Email: afshanafridi08@gmail.com</p>
+                    <p>Phone: +92 123 456 7890</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Social Links</h3>
+                    <a href="#" class="block hover:text-blue-400">Facebook</a>
+                    <a href="#" class="block hover:text-blue-400">Twitter</a>
+                    <a href="#" class="block hover:text-blue-400">LinkedIn</a>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">About Us</h3>
+                    <p>Empowering education through AI in local languages.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Legal</h3>
+                    <a href="#" class="block hover:text-blue-400">Privacy Policy</a>
+                    <a href="#" class="block hover:text-blue-400">Terms of Service</a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p>&copy; 2025 Taleem AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
