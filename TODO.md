@@ -1,8 +1,6 @@
-# TODO: Add Roles to User Auth in Datamanager App
-
-- [x] Add UserProfile model to models.py with OneToOneField to User and role field (choices: teacher, student)
-- [x] Update SignupForm in forms.py to include role selection field
-- [x] Modify signup_view in views.py to create and save UserProfile with selected role
-- [x] Register UserProfile in admin.py
-- [ ] Run python manage.py makemigrations datamanager
-- [ ] Run python manage.py migrate
+- [x] Add skill_level field to UserProfile model
+- [x] Create Syllabus model with user and topics_json fields
+- [x] Create QuizResponse model with user, topic, score, answers_json fields
+- [x] Create MCQ model with question, options_json, correct_answer, topic fields
+- Run makemigrations
+- Run migrate

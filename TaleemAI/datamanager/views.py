@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from datamanager.forms import SignupForm, LoginForm
-from datamanager.models import UserProfile
+from datamanager.models import UserProfile, MCQ
 
 
 def home(request):
@@ -47,4 +47,15 @@ def logout_view(request):
     logout(request)
     messages.success(request, 'Logged out successfully!')
     return redirect('login')
+
+
+def entry_test(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    questions = MCQ.objects.all()[:5]  # Fetch first 5 questions for the test
+    return render(request, 'entry_test.html', {
+        'user': request.user,
+        "questions": questions
+    })
+
 
